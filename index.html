@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIOTA - Academic Internet of Things Association</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+        }
+        .iot-icon {
+            color: #10B981;
+            text-shadow: 0 0 5px rgba(16, 185, 129, 0.5);
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+            }
+        }
+        .glow-text {
+            text-shadow: 0 0 8px rgba(16, 185, 129, 0.8);
+        }
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body class="gradient-bg text-white min-h-screen font-sans">
+    <!-- Navigation -->
+    <nav id="navbar" class="bg-black py-4 px-6 shadow-lg border-b border-green-500 sticky-nav">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-network-wired text-2xl iot-icon"></i>
+                <span class="text-xl font-bold">
+                    <span class="text-green-500">A</span>
+                    <span class="text-white">I</span>
+                    <span class="text-red-500">O</span>
+                    <span class="text-white">T</span>
+                    <span class="text-green-500">A</span>
+                </span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="hover:text-green-400 transition">O nas</a>
+                <a href="#activities" class="hover:text-green-400 transition">Działalność</a>
+                <a href="#projects" class="hover:text-green-400 transition">Projekty</a>
+                <a href="#board" class="hover:text-green-400 transition">Zarząd</a>
+                <a href="#contact" class="hover:text-green-400 transition">Kontakt</a>
+            </div>
+            <button class="md:hidden text-white">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6 text-center">
+        <div class="container mx-auto max-w-4xl">
+            <div class="inline-block mb-6 p-3 rounded-full bg-black border-2 border-green-500 pulse-animation">
+                <i class="fas fa-microchip text-4xl iot-icon"></i>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                <span class="text-green-500 glow-text">Academic</span> 
+                <span class="text-white">Internet of</span> 
+                <span class="text-red-500">Things</span> 
+                <span class="text-green-500">Association</span>
+            </h1>
+            <p class="text-xl text-gray-300 mb-8">
+                Koło Naukowe przy Wydziale Informatyki zajmujące się Internetem Rzeczy 
+                i wszystkimi powiązanymi technologiami.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition">
+                    Dołącz do nas
+                </a>
+                <a href="#projects" class="bg-black hover:bg-gray-900 text-white border border-red-500 px-6 py-3 rounded-lg font-medium transition">
+                    Zobacz projekty
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-6 bg-black bg-opacity-50">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl font-bold mb-12 text-center">
+                <span class="border-b-2 border-green-500 pb-2">O naszym kole</span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-green-500">Kim jesteśmy?</h3>
+                    <p class="text-gray-300 mb-6">
+                        AIOTA to koło naukowe skupiające pasjonatów Internetu Rzeczy działające przy Wydziale Informatyki. 
+                        Zajmujemy się badaniem, projektowaniem i implementacją rozwiązań IoT w różnych dziedzinach życia.
+                    </p>
+                    <h3 class="text-2xl font-semibold mb-4 text-red-500">Co robimy?</h3>
+                    <p class="text-gray-300">
+                        Organizujemy warsztaty, hackathony i prelekcje. Pracujemy nad innowacyjnymi projektami z zakresu 
+                        smart cities, przemysłowego IoT, wearable devices i wielu innych obszarów związanych z Internetem Rzeczy.
+                    </p>
+                </div>
+                <div class="relative">
+                    <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-green-500">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-green-500 rounded-full w-3 h-3 mr-2"></div>
+                            <div class="bg-red-500 rounded-full w-3 h-3 mr-2"></div>
+                            <div class="bg-green-500 rounded-full w-3 h-3"></div>
+                        </div>
+                        <div class="text-sm font-mono text-gray-300">
+                            <p class="text-green-400">// AIOTA - Academic IoT Association</p>
+                            <p class="mb-2">const ourMission = {</p>
+                            <p class="ml-4">research: "IoT technologies",</p>
+                            <p class="ml-4">develop: "smart solutions",</p>
+                            <p class="ml-4">share: "knowledge and experience",</p>
+                            <p class="ml-4">innovate: true</p>
+                            <p>};</p>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-red-500 text-black font-bold px-4 py-2 rounded-lg transform rotate-6">
+                        WYDZIAŁ INFORMATYKI
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="py-16 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl font-bold mb-12 text-center">
+                <span class="border-b-2 border-red-500 pb-2">Nasza działalność</span>
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-900 rounded-xl p-6 border-t-4 border-green-500 hover:border-red-500 transition">
+                    <div class="text-green-500 text-4xl mb-4">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Warsztaty</h3>
+                    <p class="text-gray-300">
+                        Organizujemy praktyczne warsztaty z zakresu IoT, gdzie uczestnicy mogą zdobywać wiedzę 
+                        i umiejętności pod okiem doświadczonych członków koła.
+                    </p>
+                </div>
+                <div class="bg-gray-900 rounded-xl p-6 border-t-4 border-red-500 hover:border-green-500 transition">
+                    <div class="text-red-500 text-4xl mb-4">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Hackathony</h3>
+                    <p class="text-gray-300">
+                        Regularnie uczestniczymy i organizujemy hackathony IoT, gdzie zespoły mają ograniczony czas 
+                        na stworzenie działającego prototypu rozwiązania.
+                    </p>
+                </div>
+                <div class="bg-gray-900 rounded-xl p-6 border-t-4 border-green-500 hover:border-red-500 transition">
+                    <div class="text-green-500 text-4xl mb-4">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Projekty badawcze</h3>
+                    <p class="text-gray-300">
+                        Pracujemy nad długoterminowymi projektami badawczymi, często we współpracy z firmami 
+                        i instytucjami zainteresowanymi rozwiązaniami IoT.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-6 bg-black bg-opacity-50">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl font-bold mb-12 text-center">
+                <span class="border-b-2 border-green-500 pb-2">Nasze projekty</span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-green-500 transition">
+                    <div class="h-48 bg-gradient-to-r from-black to-gray-800 flex items-center justify-center">
+                        <i class="fas fa-city text-6xl text-green-500 opacity-70"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-red-500">Smart Campus</h3>
+                        <p class="text-gray-300 mb-4">
+                            System monitorowania i optymalizacji zużycia energii w budynkach uczelnianych.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-800 text-green-400 text-xs px-3 py-1 rounded-full">IoT</span>
+                            <span class="bg-gray-800 text-red-400 text-xs px-3 py-1 rounded-full">Energy</span>
+                            <span class="bg-gray-800 text-green-400 text-xs px-3 py-1 rounded-full">Sensors</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-red-500 transition">
+                    <div class="h-48 bg-gradient-to-r from-black to-gray-800 flex items-center justify-center">
+                        <i class="fas fa-heartbeat text-6xl text-red-500 opacity-70"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-green-500">Health Tracker</h3>
+                        <p class="text-gray-300 mb-4">
+                            Wearable device monitorujący podstawowe parametry życiowe i wysyłający dane do chmury.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-800 text-red-400 text-xs px-3 py-1 rounded-full">Wearable</span>
+                            <span class="bg-gray-800 text-green-400 text-xs px-3 py-1 rounded-full">Health</span>
+                            <span class="bg-gray-800 text-red-400 text-xs px-3 py-1 rounded-full">BLE</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-green-500 transition">
+                    <div class="h-48 bg-gradient-to-r from-black to-gray-800 flex items-center justify-center">
+                        <i class="fas fa-car text-6xl text-green-500 opacity-70"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-red-500">Smart Parking</h3>
+                        <p class="text-gray-300 mb-4">
+                            System inteligentnego parkowania wykorzystujący czujniki i analizę danych w czasie rzeczywistym.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-800 text-green-400 text-xs px-3 py-1 rounded-full">LoRa</span>
+                            <span class="bg-gray-800 text-red-400 text-xs px-3 py-1 rounded-full">Smart City</span>
+                            <span class="bg-gray-800 text-green-400 text-xs px-3 py-1 rounded-full">ML</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-red-500 transition">
+                    <div class="h-48 bg-gradient-to-r from-black to-gray-800 flex items-center justify-center">
+                        <i class="fas fa-leaf text-6xl text-red-500 opacity-70"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-green-500">Agro IoT</h3>
+                        <p class="text-gray-300 mb-4">
+                            Monitorowanie warunków glebowych i atmosferycznych dla potrzeb precyzyjnego rolnictwa.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-800 text-red-400 text-xs px-3 py-1 rounded-full">Agriculture</span>
+                            <span class="bg-gray-800 text-green-400 text-xs px-3 py-1 rounded-full">Sensors</span>
+                            <span class="bg-gray-800 text-red-400 text-xs px-3 py-1 rounded-full">LoRaWAN</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Board Section -->
+    <section id="board" class="py-16 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl font-bold mb-12 text-center">
+                <span class="border-b-2 border-red-500 pb-2">Zarząd Koła</span>
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-900 rounded-xl p-6 border-t-4 border-green-500 hover:shadow-lg hover:shadow-green-500/20 transition">
+                    <div class="flex justify-center mb-4">
+                        <div class="w-32 h-32 rounded-full bg-gradient-to-br from-green-500 to-black flex items-center justify-center">
+                            <i class="fas fa-user-tie text-5xl text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center text-green-500">Prezes</h3>
+                    <p class="text-center font-medium">Jan Kowalski</p>
+                    <p class="text-gray-400 text-sm text-center">Student Informatyki, rok III</p>
+                    <div class="mt-4 flex justify-center space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-green-500 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-red-500 transition">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-gray-900 rounded-xl p-6 border-t-4 border-red-500 hover:shadow-lg hover:shadow-red-500/20 transition">
+                    <div class="flex justify-center mb-4">
+                        <div class="w-32 h-32 rounded-full bg-gradient-to-br from-red-500 to-black flex items-center justify-center">
+                            <i class="fas fa-user-graduate text-5xl text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center text-red-500">Wiceprezes</h3>
+                    <p class="text-center font-medium">Anna Nowak</p>
+                    <p class="text-gray-400 text-sm text-center">Studentka Informatyki, rok II</p>
+                    <div class="mt-4 flex justify-center space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-green-500 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-red-500 transition">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-gray-900 rounded-xl p-6 border-t-4 border-green-500 hover:shadow-lg hover:shadow-green-500/20 transition">
+                    <div class="flex justify-center mb-4">
+                        <div class="w-32 h-32 rounded-full bg-gradient-to-br from-green-500 to-black flex items-center justify-center">
+                            <i class="fas fa-user-cog text-5xl text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center text-green-500">Sekretarz</h3>
+                    <p class="text-center font-medium">Piotr Wiśniewski</p>
+                    <p class="text-gray-400 text-sm text-center">Student Informatyki, rok II</p>
+                    <div class="mt-4 flex justify-center space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-green-500 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-red-500 transition">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 bg-black bg-opacity-50 rounded-xl p-6 border-l-4 border-red-500">
+                <h3 class="text-xl font-semibold mb-4 text-green-500">Opiekun Koła</h3>
+                <div class="flex items-center">
+                    <div class="mr-6">
+                        <div class="w-20 h-20 rounded-full bg-gradient-to-br from-gray-800 to-black flex items-center justify-center">
+                            <i class="fas fa-chalkboard-teacher text-3xl text-green-500"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="font-medium">dr hab. inż. Marek Zieliński</p>
+                        <p class="text-gray-400">Wydział Informatyki</p>
+                        <p class="text-sm text-gray-500 mt-2">Specjalista w dziedzinie systemów rozproszonych and IoT</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-6 bg-black bg-opacity-50">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold mb-12 text-center">
+                <span class="border-b-2 border-red-500 pb-2">Kontakt</span>
+            </h2>
+            <div class="bg-gray-900 rounded-xl p-8 border border-gray-800">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-green-500">Dane kontaktowe</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-university text-red-500 mt-1 mr-3"></i>
+                                <div>
+                                    <p class="font-medium">Wydział Informatyki</p>
+                                    <p class="text-gray-400">Academic Internet of Things Association</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-user-tie text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <p class="font-medium">Opiekun koła:</p>
+                                    <p class="text-gray-400">dr hab. inż. Marek Zieliński</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope text-red-500 mt-1 mr-3"></i>
+                                <div>
+                                    <p class="font-medium">Email:</p>
+                                    <p class="text-gray-400">aiota@info.edu.pl</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <p class="font-medium">Lokalizacja:</p>
+                    <p class="text-gray-400">Wydział Informatyki, pokój 305</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h3 class="text-xl font-semibold mb-4 text-red-500">Spotkania</h3>
+        <div class="bg-black bg-opacity-50 rounded-lg p-4 mb-4 border-l-4 border-green-500">
+            <p class="font-medium text-green-400">Terminy spotkań:</p>
+            <p class="text-gray-300">Środy, godz. 18:00-20:00</p>
+        </div>
+        <div class="bg-black bg-opacity-50 rounded-lg p-4 border-l-4 border-red-500">
+            <p class="font-medium text-red-400">Dołącz do nas:</p>
+            <p class="text-gray-300 mb-2">Śledź nas na mediach społecznościowych:</p>
+            <div class="flex space-x-4">
+                <a href="#" class="text-gray-400 hover:text-green-500 transition">
+                    <i class="fab fa-facebook-f text-xl"></i>
+                </a>
+                <a href="https://www.instagram.com/aiota_agh/profilecard/?igsh=ZnE2MmtrNHF6bXEx" class="text-gray-400 hover:text-red-500 transition">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-green-500 transition">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-red-500 transition">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black py-8 px-6 border-t border-gray-800">
+    <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center mb-4 md:mb-0">
+                <i class="fas fa-network-wired text-2xl iot-icon mr-2"></i>
+                <span class="text-xl font-bold">
+                    <span class="text-green-500">A</span>
+                    <span class="text-white">I</span>
+                    <span class="text-red-500">O</span>
+                    <span class="text-white">T</span>
+                    <span class="text-green-500">A</span>
+                </span>
+            </div>
+            <div class="text-gray-400 text-sm text-center md:text-right">
+                <p>© 2023 Academic Internet of Things Association. Wszelkie prawa zastrzeżone.</p>
+                <p>Wydział Informatyki</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Removed the scroll hide/show functionality for navbar
+</script>
+</body>
+</html>
